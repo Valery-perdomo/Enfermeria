@@ -529,15 +529,55 @@ div[data-baseweb="textarea"]:focus-within {
     color: #ffffff !important;
 }
 
-/* En pantallas pequeñas las tarjetas se ven en 2 columnas */
-@media (max-width: 900px) {
-    .st-key-panel_avance [data-testid="stHorizontalBlock"] {
-        flex-wrap: wrap !important;
+/* Arreglo: Streamlit pone margin-bottom negativo a los textos y el
+   "MÓDULO N" quedaba montado encima del nombre del módulo */
+[class*="st-key-tarjeta_"] [data-testid="stMarkdownContainer"] {
+    margin-bottom: 0 !important;
+}
+[class*="st-key-tarjeta_"] [data-testid="stElementContainer"] {
+    height: auto !important;
+    margin: 0 !important;
+}
+[class*="st-key-tarjeta_"] .stButton button {
+    min-height: 2.6rem !important;
+    align-items: center !important;
+}
+[class*="st-key-tarjeta_"] .stButton button > div,
+[class*="st-key-tarjeta_"] .stButton button span,
+[class*="st-key-tarjeta_"] .stButton button [data-testid="stMarkdownContainer"] {
+    justify-content: flex-start !important;
+    width: 100% !important;
+    text-align: left !important;
+}
+
+/* Las tarjetas se acomodan solas: nunca quedan más estrechas de 150 px */
+.st-key-panel_avance [data-testid="stHorizontalBlock"] {
+    flex-wrap: wrap !important;
+}
+.st-key-panel_avance [data-testid="stColumn"] {
+    flex: 1 1 150px !important;
+    min-width: 150px !important;
+    width: auto !important;
+}
+@media (max-width: 1150px) {
+    .st-key-panel_avance [data-testid="stColumn"] {
+        flex: 1 1 calc(25% - 0.8rem) !important;
+        min-width: calc(25% - 0.8rem) !important;
     }
+}
+@media (max-width: 760px) {
     .st-key-panel_avance [data-testid="stColumn"] {
         flex: 1 1 calc(50% - 0.8rem) !important;
         min-width: calc(50% - 0.8rem) !important;
     }
+}
+
+/* Más aire entre los campos del formulario */
+[data-testid="stHorizontalBlock"] {
+    row-gap: 0.4rem !important;
+}
+[data-testid="stWidgetLabel"] p {
+    line-height: 1.3 !important;
 }
 
 /* ============================================================

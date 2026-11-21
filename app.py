@@ -119,6 +119,14 @@ def ir_a_modulo(etiqueta: str) -> None:
     st.session_state[NAV_KEY] = etiqueta
 
 
+def fila(n, ancho=None):
+    """Una fila de columnas alineadas por abajo (los campos quedan parejos aunque una etiqueta ocupe 2 líneas)."""
+    try:
+        return st.columns(ancho or n, vertical_alignment="bottom")
+    except TypeError:
+        return st.columns(ancho or n)
+
+
 ICONOS_MODULO = ["🗂️", "🗣️", "📋", "🩺", "🧾", "💊", "✍️"]
 
 
@@ -315,7 +323,7 @@ d = {}
 # ---------------- 1. IDENTIFICACIÓN ----------------
 with tabs[0]:
     seccion("Datos Administrativos de la Consulta", "🗂️", modulo=1)
-    c1, c2, c3 = st.columns(3)
+    c1, c2, c3 = fila(3)
     # Res. 1995 de 1999, art. 6: la historia clínica se identifica con el número del documento del usuario.
     _doc_hc = str(st.session_state.get("id_doc_paciente", "") or "").strip()
     _tipo_hc = st.session_state.get("id_tipo_doc", "CC")
@@ -326,6 +334,7 @@ with tabs[0]:
     d["N° Atención"] = c2.text_input("N° DE ATENCIÓN (CONSECUTIVO)", key="id_hc_num",
                                     help="Se asigna automáticamente y avanza cada vez que descargas un PDF.")
     d["Fecha de Atención"] = c3.text_input("FECHA Y HORA DE INICIO DE LA ATENCIÓN", datetime.now().strftime("%Y-%m-%d %H:%M"), key="id_fecha_atencion")
+    c1, c2, c3 = fila(3)
     d["Servicio"] = c1.text_input("SERVICIO / ESCENARIO DE PRÁCTICA", key="id_servicio")
     d["Vía de Ingreso"] = select_con_otro(c2, "VÍA DE INGRESO", ["Consulta externa", "Urgencias", "Remitido de otra institución",
                                                         "Hospitalización", "Atención extramural / domiciliaria", "Otra"], key="id_via_ingreso")
@@ -333,14 +342,14 @@ with tabs[0]:
                                                                     "Control / seguimiento", "Otra"], key="id_causa")
 
     seccion("Datos Personales del Paciente", "👤", modulo=1)
-    c1, c2, c3 = st.columns(3)
+    c1, c2, c3 = fila(3)
     d["Paciente"] = c1.text_input("NOMBRE DEL PACIENTE (COMPLETO)", key="id_paciente")
     d["Tipo Doc"] = c2.selectbox("TIPO DE DOCUMENTO", ["CC", "TI", "RC", "CE", "PA", "PEP", "PPT"], key="id_tipo_doc")
     d["Documento Paciente"] = c3.text_input("N° DE DOCUMENTO", key="id_doc_paciente")
     
     # Fecha de nacimiento con calendario y edad calculada automáticamente.
     hoy = date.today()
-    f1, f2, f3 = st.columns(3)
+    f1, f2, f3 = fila(3)
     d["Zona"] = f3.selectbox("ZONA DE RESIDENCIA", ["Urbana", "Rural"], key="id_zona")
     nacimiento = f1.date_input("FECHA DE NACIMIENTO (DD/MM/AAAA)", date(1990, 1, 1),
                             min_value=date(1900, 1, 1), max_value=hoy, format="DD/MM/YYYY",
@@ -359,31 +368,39 @@ with tabs[0]:
     st.session_state["id_edad_disp"] = texto_edad
     f4.text_input("EDAD (CALCULADA)", disabled=True, key="id_edad_disp")
 
-    c1, c2, c3 = st.columns(3)
-    d["Sexo"] = c3.selectbox("SEXO BIOLÓGICO", ["Mujer", "Hombre", "Indeterminado / intersexual"], key="id_sexo")
+    c1, c2, c3 = fila(3)
     d["Identidad de Género"] = select_con_otro(c1, "IDENTIDAD DE GÉNERO", ["Femenino", "Masculino", "Transgénero", "No binario",
                                                                     "Otra", "Prefiere no responder"], key="id_genero")
     d["Nacionalidad"] = c2.text_input("PAÍS DE NACIONALIDAD", "Colombia", key="id_nacionalidad")
-    d["Discapacidad"] = c3.selectbox("CATEGORÍA DE DISCAPACIDAD", ["Ninguna", "Física", "Auditiva", "Visual", "Sordoceguera",
-                                                                "Intelectual", "Psicosocial (mental)", "Múltiple"], key="id_discapacidad")
-    
+    d["Sexo"] = c3.selectbox("SEXO BIOLÓGICO", ["Mujer", "Hombre", "Indeterminado / intersexual"], key="id_sexo")
+
+    c1, c2, c3 = fila(3)
     d["Estado Civil"] = c1.text_input("ESTADO CIVIL", key="id_estado_civil")
     d["Teléfono"] = c2.text_input("TELÉFONO", key="id_telefono")
-    d["Dirección"] = c3.text_input("DIRECCIÓN DE VIVIENDA", key="id_direccion")
+    d["Discapacidad"] = c3.selectbox("CATEGORÍA DE DISCAPACIDAD", ["Ninguna", "Física", "Auditiva", "Visual", "Sordoceguera",
+                                                                "Intelectual", "Psicosocial (mental)", "Múltiple"], key="id_discapacidad")
+
+    c1, c2, c3 = fila(3)
     d["Ciudad/Departamento"] = c1.text_input("CIUDAD / DEPARTAMENTO", "Neiva, Huila", key="id_ciudad")
     d["EPS"] = c2.text_input("EPS DEL PACIENTE", key="id_eps")
-    d["Ocupación"] = c3.text_input("OCUPACIÓN", key="id_ocupacion")
+    d["Dirección"] = c3.text_input("DIRECCIÓN DE VIVIENDA", key="id_direccion")
+
+    c1, c2, c3 = fila(3)
     d["Tipo Plan"] = c1.selectbox("RÉGIMEN", ["Contributivo", "Subsidiado", "Especial", "Particular"], key="id_regimen")
     d["Condición Usuario"] = c2.text_input("CONDICIÓN (COTIZANTE/BENEFICIARIO)", key="id_condicion")
-    d["Escolaridad"] = c3.text_input("ESCOLARIDAD", key="id_escolaridad")
+    d["Ocupación"] = c3.text_input("OCUPACIÓN", key="id_ocupacion")
+
+    c1, c2, c3 = fila(3)
     d["Religión"] = c1.text_input("RELIGIÓN / CREENCIAS", key="id_religion")
     d["Grupo Étnico"] = c2.text_input("PERTENENCIA ÉTNICA", "Ninguna", key="id_etnia")
-    
+    d["Escolaridad"] = c3.text_input("ESCOLARIDAD", key="id_escolaridad")
+
     seccion("ACOMPAÑANTE O REPRESENTANTE LEGAL", "👥")
-    c1, c2, c3 = st.columns(3)
+    c1, c2, c3 = fila(3)
     d["Acompañante"] = c1.text_input("NOMBRE DEL ACOMPAÑANTE", key="id_acomp")
     d["Parentesco"] = c2.text_input("PARENTESCO", key="id_parentesco")
     d["Tel Acompañante"] = c3.text_input("TELÉFONO DEL ACOMPAÑANTE", key="id_tel_acomp")
+    c1, c2, c3 = fila(3)
     d["Doc Acompañante"] = c1.text_input("DOCUMENTO DEL REPRESENTANTE", key="id_doc_acomp")
     
     if edad < 18:
@@ -425,7 +442,7 @@ with tabs[2]:
 with tabs[3]:
     seccion("Antropometría y Signos Vitales", "📏", modulo=4)
     
-    a1, a2, a3 = st.columns(3)
+    a1, a2, a3 = fila(3)
     peso = a1.number_input("PESO (KG)", min_value=0.0, max_value=400.0, value=0.0, step=0.1, format="%.1f", key="val_peso")
     talla = a2.number_input("TALLA (CM)", min_value=0.0, max_value=250.0, value=0.0, step=0.5, format="%.1f", key="val_talla")
     
@@ -444,7 +461,7 @@ with tabs[3]:
     d["IMC"] = imc_texto
 
     with st.form("form_sv", clear_on_submit=True):
-        s = st.columns(8)
+        s = fila(4) + fila(4)
         sv_hora = s[0].text_input("FECHA/HORA", datetime.now().strftime("%Y-%m-%d %H:%M"), key="sv_hora")
         sv_ta = s[1].text_input("TA (MMHG)", key="sv_ta")
         sv_fc = s[2].text_input("FC (LPM)", key="sv_fc")
@@ -483,10 +500,11 @@ with tabs[3]:
 
     seccion("ESCALAS DE VALORACIÓN", "📊")
     NA = "No aplica"
-    c1, c2, c3 = st.columns(3)
+    c1, c2, c3 = fila(3)
     _g = c1.selectbox("GLASGOW (/15)", [NA] + [str(x) for x in range(15, 2, -1)], key="esc_glasgow")
     _e = c2.selectbox("DOLOR - EVA (0 A 10)", [NA] + [str(x) for x in range(0, 11)], key="esc_eva")
     d["Braden"] = c3.text_input("BRADEN - RIESGO DE UPP (PUNTAJE E INTERPRETACIÓN)", key="esc_braden", placeholder="Ej.: 14 - riesgo moderado")
+    c1, c2, c3 = fila(3)
     d["Morse"] = c1.text_input("MORSE - RIESGO DE CAÍDAS (PUNTAJE E INTERPRETACIÓN)", key="esc_morse", placeholder="Ej.: 45 - riesgo alto")
     d["Barthel"] = c2.text_input("BARTHEL / KATZ - DEPENDENCIA (PUNTAJE E INTERPRETACIÓN)", key="esc_barthel", placeholder="Ej.: 90 - dependencia leve")
     d["Otra Escala"] = c3.text_input("OTRA ESCALA (NOMBRE Y RESULTADO)", key="esc_otra")
@@ -495,17 +513,18 @@ with tabs[3]:
 
     if _e not in (NA, "0"):
         seccion("VALORACIÓN DEL DOLOR", "💢")
-        c1, c2, c3 = st.columns(3)
+        c1, c2, c3 = fila(3)
         d["Dolor Ubicación"] = c1.text_input("UBICACIÓN / IRRADIACIÓN", key="dolor_ubic")
         d["Dolor Tipo"] = c2.text_input("TIPO / CARÁCTER (PUNZANTE, OPRESIVO…)", key="dolor_tipo")
         d["Dolor Duración"] = c3.text_input("DURACIÓN / FRECUENCIA", key="dolor_dur")
+        c1, c2, c3 = fila(3)
         d["Dolor Alivia"] = c1.text_input("QUÉ LO ALIVIA", key="dolor_alivia")
         d["Dolor Empeora"] = c2.text_input("QUÉ LO EMPEORA", key="dolor_empeora")
 
     seccion("PATRONES FUNCIONALES DE GORDON", "🧩")
     patrones = {}
     for p in PATRONES_GORDON:
-        a, b = st.columns([4, 1])
+        a, b = fila(2, [4, 1])
         h = a.text_input(p, key=f"h_{p}")
         e = b.selectbox("Estado", ["", "Funcional", "Disfuncional"], key=f"e_{p}", label_visibility="collapsed")
         patrones[p] = {"hallazgos": h, "estado": e}
@@ -539,12 +558,12 @@ with tabs[4]:
 with tabs[5]:
     seccion("Administración de Medicamentos", "💊", modulo=6)
     with st.form("form_med", clear_on_submit=True):
-        c1, c2, c3, c4 = st.columns(4)
+        c1, c2, c3, c4 = fila(4)
         med = c1.text_input("MEDICAMENTO", key="med_nombre")
         dosis = c2.text_input("DOSIS", key="med_dosis")
         via = c3.text_input("VÍA", key="med_via")
         hora_prog = c4.text_input("HORA PROGRAMADA", key="med_hora_prog")
-        c1, c2, c3 = st.columns(3)
+        c1, c2, c3 = fila(3)
         hora_admin = c1.text_input("FECHA/HORA DE ADMINISTRACIÓN", datetime.now().strftime("%Y-%m-%d %H:%M"), key="med_hora_admin")
         prescriptor = c2.text_input("PRESCRIPTOR / INDICACIÓN", key="med_prescriptor")
         resp = c3.text_input("RESPONSABLE (QUIEN ADMINISTRA)", key="med_resp")
@@ -577,7 +596,7 @@ with tabs[5]:
 
     seccion("CONTROL DE LÍQUIDOS (INGRESOS Y EGRESOS)", "💧")
     with st.form("form_liq", clear_on_submit=True):
-        c1, c2, c3, c4, c5 = st.columns(5)
+        c1, c2, c3, c4, c5 = fila(5)
         liq_hora = c1.text_input("FECHA/HORA", datetime.now().strftime("%Y-%m-%d %H:%M"), key="liq_hora")
         liq_tipo = c2.selectbox("TIPO", ["Ingreso", "Egreso"], key="liq_tipo")
         liq_concepto = c3.selectbox("CONCEPTO", ["Vía oral", "Líquidos endovenosos", "Sonda (nutrición)", "Medicamentos diluidos",
