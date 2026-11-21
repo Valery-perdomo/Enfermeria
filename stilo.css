@@ -1,0 +1,1370 @@
+/* =========================================================
+   ESTILO EXACTO BASADO EN SALUD ORAL / ODONTOLOGÍA
+   ========================================================= */
+
+.stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+    background-color: #eff8ff !important;
+}
+
+[data-testid="stMainBlockContainer"] {
+    padding-top: 1.5rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 1350px !important;
+}
+
+html, body, [class*="css"] {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    color: #1e293b !important;
+}
+
+/* ============================================================
+   BARRITA DE SEPARACIÓN / CARDS BLANCAS CON BORDE AZUL CLARO
+   ============================================================ */
+
+.tarjeta-blanca-separador {
+    background-color: #ffffff;
+    border: 1px solid #bae6fd;
+    border-radius: 14px;
+    height: 48px;
+    width: 100%;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 6px rgba(186, 230, 253, 0.2);
+}
+
+/* ============================================================
+   ENCABEZADO INSTITUCIONAL
+   ============================================================ */
+
+.encabezado-enfermeria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0d8b7d;
+    border-radius: 20px;
+    padding: 1.2rem 2.2rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    min-height: 130px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(13, 139, 125, 0.15);
+}
+
+.logo-enfermeria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0.5rem 0.8rem;
+    width: 180px;
+    min-width: 180px;
+    height: 75px;
+    box-sizing: border-box;
+}
+
+.logo-enfermeria img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.texto-encabezado-enfermeria {
+    flex: 1;
+    margin-left: 1.8rem;
+    text-align: left;
+}
+
+.texto-encabezado-enfermeria h1 {
+    color: #ffffff !important;
+    font-size: 1.85rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.3rem 0 !important;
+    line-height: 1.1;
+}
+
+.texto-encabezado-enfermeria p {
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+    font-weight: 500;
+}
+
+.estado-encabezado-enfermeria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+    color: #ffffff;
+    text-align: right;
+}
+
+.estado-encabezado-enfermeria strong {
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    padding: 0.45rem 1rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.estado-encabezado-enfermeria span {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================================
+   SUBHEADER INFO / ESTADO
+   ============================================================ */
+
+.resumen-enfermeria {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.88rem;
+    color: #0d8b7d;
+    font-weight: 600;
+}
+
+.estado-resumen-enfermeria {
+    padding-left: 0.8rem;
+    border-left: 1.5px solid #94a3b8;
+    color: #475569;
+    font-weight: 400;
+}
+
+.estado-resumen-enfermeria strong {
+    color: #0d8b7d;
+    font-weight: 700;
+}
+
+/* ============================================================
+   NAVEGACIÓN POR PESTAÑAS (PESTAÑAS PLANAS SIN CAJA)
+   ============================================================ */
+
+.stTabs {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1.5rem !important;
+    background: transparent !important;
+    padding: 0 0 0.5rem 0 !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+    margin-bottom: 1.2rem !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 3px solid transparent !important;
+    color: #334155 !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    padding: 0.4rem 0.2rem 0.6rem 0.2rem !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: transparent !important;
+    color: #0d8b7d !important;
+    border-bottom: 3px solid #0d8b7d !important;
+    font-weight: 700 !important;
+}
+
+.stTabs [role="tabpanel"] {
+    padding: 0 !important;
+}
+
+
+/* ============================================================
+   ETIQUETAS MÓDULO (BADGES MÓDULO 0, MÓDULO 1)
+   ============================================================ */
+
+.badge-modulo {
+    background-color: #e6f4f1;
+    color: #0d8b7d;
+    border: 1px solid #b2dfdb;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.subseccion-titulo {
+    color: #0d8b7d;
+    font-weight: 800;
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   BOTONES
+   ============================================================ */
+
+.stButton > button,
+.stDownloadButton > button {
+    background-color: #0d8b7d !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.88rem !important;
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 0.55rem 1.25rem !important;
+    box-shadow: 0 2px 4px rgba(13, 139, 125, 0.2) !important;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    background-color: #0a7367 !important;
+    box-shadow: 0 4px 8px rgba(13, 139, 125, 0.3) !important;
+}
+
+/* Botón final de la PDF */
+.st-key-generar_pdf button {
+    width: 100% !important;
+    background-color: #0d8b7d !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.95rem !important;
+}
+
+@media (max-width: 768px) {
+    .encabezado-enfermeria {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.2rem;
+    }
+    .texto-encabezado-enfermeria {
+        margin-left: 0;
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+        text-align: center;
+    }
+    .estado-encabezado-enfermeria {
+        align-items: center;
+        text-align: center;
+    }
+}
+/* Fondo blanco e impresiones limpias para las cajas de texto */
+div[data-baseweb="input"] {
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+div[data-baseweb="input"] input {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+
+/* Casillas deshabilitadas (ej. IMC) con texto negro en negrita y fondo blanco */
+div[data-baseweb="input"] input:disabled {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    font-weight: 800 !important;
+    font-size: 1.05rem !important;
+    background-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* ============================================================
+   INTERACTIVIDAD (transiciones, hover y foco de los campos)
+   Tailwind estiliza el HTML propio (ui_tailwind.py); estos efectos
+   aplican a los componentes que dibuja Streamlit.
+   ============================================================ */
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Cada pestaña aparece con un deslizamiento suave */
+.stTabs [role="tabpanel"] > div,
+[data-testid="stTabPanel"] > div {
+    animation: aparecer 0.35s ease-out;
+}
+
+/* Pestañas: color al pasar el mouse y subrayado animado */
+.stTabs [data-baseweb="tab"] {
+    transition: color 0.2s ease, border-color 0.25s ease, transform 0.2s ease !important;
+}
+.stTabs [data-baseweb="tab"]:hover {
+    color: #0d8b7d !important;
+    border-bottom-color: #99d5cc !important;
+    transform: translateY(-1px);
+}
+.stTabs [data-baseweb="tab-highlight"] {
+    background-color: #0d8b7d !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Cajas de texto, listas y áreas de texto: borde y brillo al pasar y al escribir */
+div[data-baseweb="input"],
+div[data-baseweb="select"] > div,
+div[data-baseweb="textarea"] {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+div[data-baseweb="input"]:hover,
+div[data-baseweb="select"] > div:hover,
+div[data-baseweb="textarea"]:hover {
+    border-color: #5eb8ad !important;
+}
+div[data-baseweb="input"]:focus-within,
+div[data-baseweb="select"] > div:focus-within,
+div[data-baseweb="textarea"]:focus-within {
+    border-color: #0d8b7d !important;
+    box-shadow: 0 0 0 4px rgba(13, 139, 125, 0.15) !important;
+}
+
+/* Títulos de los campos cambian de color cuando el campo está activo */
+[data-testid="stWidgetLabel"] p {
+    transition: color 0.2s ease;
+}
+.stTextInput:focus-within [data-testid="stWidgetLabel"] p,
+.stTextArea:focus-within [data-testid="stWidgetLabel"] p,
+.stSelectbox:focus-within [data-testid="stWidgetLabel"] p,
+.stDateInput:focus-within [data-testid="stWidgetLabel"] p,
+.stNumberInput:focus-within [data-testid="stWidgetLabel"] p {
+    color: #0d8b7d !important;
+    font-weight: 700 !important;
+}
+
+/* Botones: se elevan al pasar el mouse y se hunden al hacer clic */
+.stButton > button,
+.stDownloadButton > button,
+[data-testid="stFormSubmitButton"] > button {
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+.stButton > button:hover,
+.stDownloadButton > button:hover,
+[data-testid="stFormSubmitButton"] > button:hover {
+    transform: translateY(-2px);
+}
+.stButton > button:active,
+.stDownloadButton > button:active,
+[data-testid="stFormSubmitButton"] > button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Formularios (signos vitales, medicamentos, líquidos) como tarjetas */
+[data-testid="stForm"] {
+    background: #ffffff;
+    border: 1px solid #d6eef0 !important;
+    border-radius: 16px !important;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+[data-testid="stForm"]:hover {
+    border-color: #99d5cc !important;
+    box-shadow: 0 8px 24px rgba(13, 139, 125, 0.08);
+}
+
+/* Totales del control de líquidos como tarjetas */
+[data-testid="stMetric"] {
+    background: #ffffff;
+    border: 1px solid #d6eef0;
+    border-radius: 14px;
+    padding: 0.8rem 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+[data-testid="stMetric"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 139, 125, 0.12);
+}
+
+/* Tablas y avisos con bordes redondeados */
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+[data-testid="stDataFrame"]:hover {
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+[data-testid="stAlert"] {
+    border-radius: 12px !important;
+    animation: aparecer 0.3s ease-out;
+}
+
+/* Respeta a quienes prefieren menos movimiento en pantalla */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+
+/* ============================================================
+   NAVEGACIÓN CON LAS TARJETAS DEL PANEL DE AVANCE
+   La barra de pestañas se oculta: cada tarjeta abre su módulo.
+   ============================================================ */
+
+.stTabs [role="tablist"],
+.stTabs [data-testid="stTab"],
+[data-testid="stTabsScrollLeft"],
+[data-testid="stTabsScrollRight"],
+.stTabs [data-baseweb="tab-list"],
+.stTabs [data-baseweb="tab-border"],
+.stTabs [data-baseweb="tab-highlight"] {
+    display: none !important;
+}
+
+/* Contenedor del panel */
+.st-key-panel_avance {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fdfc 100%);
+    border: 1px solid #dcefee;
+    border-radius: 22px;
+    padding: 1.2rem 1.3rem 1.3rem;
+    margin-bottom: 1.6rem;
+    gap: 1.1rem !important;
+    box-shadow: 0 10px 30px -12px rgba(13, 139, 125, 0.18);
+}
+
+/* Columnas del panel con la misma altura */
+.st-key-panel_avance [data-testid="stHorizontalBlock"] {
+    align-items: stretch !important;
+    gap: 0.8rem !important;
+}
+
+/* Cada tarjeta de módulo (toda la tarjeta es clicable) */
+[class*="st-key-tarjeta_"] {
+    position: relative;
+    gap: 0.45rem !important;
+    background: #ffffff;
+    border: 1px solid #e5edf3;
+    border-radius: 18px;
+    padding: 0.85rem 0.9rem 0.9rem;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(.2, .8, .2, 1), box-shadow 0.25s ease,
+                border-color 0.25s ease, background 0.25s ease;
+}
+/* Línea de color arriba según el avance */
+[class*="st-key-tarjeta_"]::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: #e2e8f0;
+}
+[class*="st-key-tarjeta_"][class*="completo_"]::before { background: linear-gradient(90deg, #10b981, #34d399); }
+[class*="st-key-tarjeta_"][class*="parcial_"]::before  { background: linear-gradient(90deg, #f59e0b, #fcd34d); }
+
+[class*="st-key-tarjeta_"]:hover {
+    transform: translateY(-5px);
+    border-color: #99d5cc;
+    box-shadow: 0 16px 30px -12px rgba(13, 139, 125, 0.35);
+}
+[class*="st-key-tarjeta_"]:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Módulo abierto: degradado verde institucional */
+[class*="st-key-tarjeta_activa_"] {
+    background: linear-gradient(140deg, #0f766e 0%, #0d9488 55%, #10b981 100%);
+    border-color: transparent;
+    box-shadow: 0 18px 34px -14px rgba(13, 139, 125, 0.65);
+    transform: translateY(-3px);
+}
+[class*="st-key-tarjeta_activa_"]::before { background: rgba(255, 255, 255, 0.35); }
+[class*="st-key-tarjeta_activa_"]:hover {
+    border-color: transparent;
+    box-shadow: 0 22px 38px -14px rgba(13, 139, 125, 0.75);
+}
+
+/* El botón (nombre del módulo) ocupa toda la tarjeta pero se ve como texto */
+[class*="st-key-tarjeta_"] div,
+[class*="st-key-tarjeta_"] button {
+    position: static !important;
+}
+[class*="st-key-tarjeta_"] .stButton button {
+    background: transparent !important;
+    color: #1e293b !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-height: 2.5rem !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    transform: none !important;
+}
+[class*="st-key-tarjeta_"] .stButton button p {
+    text-align: left !important;
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+}
+[class*="st-key-tarjeta_"] .stButton button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: 18px;
+}
+[class*="st-key-tarjeta_"] .stButton button:hover,
+[class*="st-key-tarjeta_"] .stButton button:focus,
+[class*="st-key-tarjeta_"] .stButton button:active {
+    background: transparent !important;
+    color: #0d8b7d !important;
+    box-shadow: none !important;
+}
+[class*="st-key-tarjeta_"] .stButton button:focus-visible::after {
+    outline: 3px solid rgba(13, 139, 125, 0.45);
+    outline-offset: -3px;
+}
+[class*="st-key-tarjeta_activa_"] .stButton button,
+[class*="st-key-tarjeta_activa_"] .stButton button:hover {
+    color: #ffffff !important;
+}
+
+/* En pantallas pequeñas las tarjetas se ven en 2 columnas */
+@media (max-width: 900px) {
+    .st-key-panel_avance [data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap !important;
+    }
+    .st-key-panel_avance [data-testid="stColumn"] {
+        flex: 1 1 calc(50% - 0.8rem) !important;
+        min-width: calc(50% - 0.8rem) !important;
+    }
+}
+
+/* ============================================================
+   TAILWIND CSS v4 (compilado, prefijo "tw:")
+   Clases usadas en el encabezado, el panel de avance y las tarjetas de sección de app.py.
+   ============================================================ */
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties;
+:root, :host {
+  --tw-color-amber-50: oklch(98.7% 0.022 95.277);
+  --tw-color-amber-100: oklch(96.2% 0.059 95.617);
+  --tw-color-amber-400: oklch(82.8% 0.189 84.429);
+  --tw-color-amber-700: oklch(55.5% 0.163 48.998);
+  --tw-color-emerald-50: oklch(97.9% 0.021 166.113);
+  --tw-color-emerald-100: oklch(95% 0.052 163.051);
+  --tw-color-emerald-300: oklch(84.5% 0.143 164.978);
+  --tw-color-emerald-500: oklch(69.6% 0.17 162.48);
+  --tw-color-emerald-700: oklch(50.8% 0.118 165.612);
+  --tw-color-teal-50: oklch(98.4% 0.014 180.72);
+  --tw-color-teal-100: oklch(95.3% 0.051 180.801);
+  --tw-color-teal-200: oklch(91% 0.096 180.426);
+  --tw-color-teal-600: oklch(60% 0.118 184.704);
+  --tw-color-teal-700: oklch(51.1% 0.096 186.391);
+  --tw-color-teal-800: oklch(43.7% 0.078 188.216);
+  --tw-color-sky-100: oklch(95.1% 0.026 236.824);
+  --tw-color-slate-100: oklch(96.8% 0.007 247.896);
+  --tw-color-slate-300: oklch(86.9% 0.022 252.894);
+  --tw-color-slate-400: oklch(70.4% 0.04 256.788);
+  --tw-color-slate-500: oklch(55.4% 0.046 257.417);
+  --tw-color-slate-800: oklch(27.9% 0.041 260.031);
+  --tw-color-white: #fff;
+  --tw-spacing: 0.25rem;
+  --tw-text-xs: 0.75rem;
+  --tw-text-xs--line-height: calc(1 / 0.75);
+  --tw-text-sm: 0.875rem;
+  --tw-text-sm--line-height: calc(1.25 / 0.875);
+  --tw-text-base: 1rem;
+  --tw-text-base--line-height: calc(1.5 / 1);
+  --tw-text-lg: 1.125rem;
+  --tw-text-lg--line-height: calc(1.75 / 1.125);
+  --tw-text-xl: 1.25rem;
+  --tw-text-xl--line-height: calc(1.75 / 1.25);
+  --tw-text-3xl: 1.875rem;
+  --tw-text-3xl--line-height: calc(2.25 / 1.875);
+  --tw-font-weight-medium: 500;
+  --tw-font-weight-semibold: 600;
+  --tw-font-weight-bold: 700;
+  --tw-font-weight-extrabold: 800;
+  --tw-tracking-tight: -0.025em;
+  --tw-tracking-wide: 0.025em;
+  --tw-tracking-wider: 0.05em;
+  --tw-tracking-widest: 0.1em;
+  --tw-leading-tight: 1.25;
+  --tw-radius-xl: 0.75rem;
+  --tw-radius-2xl: 1rem;
+  --tw-radius-3xl: 1.5rem;
+  --tw-animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --tw-default-transition-duration: 150ms;
+  --tw-default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tw\:pointer-events-none {
+  pointer-events: none;
+}
+.tw\:absolute {
+  position: absolute;
+}
+.tw\:relative {
+  position: relative;
+}
+.tw\:-top-20 {
+  top: calc(var(--tw-spacing) * -20);
+}
+.tw\:-right-16 {
+  right: calc(var(--tw-spacing) * -16);
+}
+.tw\:right-1\/3 {
+  right: calc(1 / 3 * 100%);
+}
+.tw\:-bottom-24 {
+  bottom: calc(var(--tw-spacing) * -24);
+}
+.tw\:m-0 {
+  margin: 0px;
+}
+.tw\:mt-1 {
+  margin-top: var(--tw-spacing);
+}
+.tw\:mt-2 {
+  margin-top: calc(var(--tw-spacing) * 2);
+}
+.tw\:mt-6 {
+  margin-top: calc(var(--tw-spacing) * 6);
+}
+.tw\:mb-3 {
+  margin-bottom: calc(var(--tw-spacing) * 3);
+}
+.tw\:mb-4 {
+  margin-bottom: calc(var(--tw-spacing) * 4);
+}
+.tw\:flex {
+  display: flex;
+}
+.tw\:grid {
+  display: grid;
+}
+.tw\:inline-flex {
+  display: inline-flex;
+}
+.tw\:size-2\.5 {
+  width: calc(var(--tw-spacing) * 2.5);
+  height: calc(var(--tw-spacing) * 2.5);
+}
+.tw\:size-6 {
+  width: calc(var(--tw-spacing) * 6);
+  height: calc(var(--tw-spacing) * 6);
+}
+.tw\:size-9 {
+  width: calc(var(--tw-spacing) * 9);
+  height: calc(var(--tw-spacing) * 9);
+}
+.tw\:size-10 {
+  width: calc(var(--tw-spacing) * 10);
+  height: calc(var(--tw-spacing) * 10);
+}
+.tw\:size-12 {
+  width: calc(var(--tw-spacing) * 12);
+  height: calc(var(--tw-spacing) * 12);
+}
+.tw\:size-16 {
+  width: calc(var(--tw-spacing) * 16);
+  height: calc(var(--tw-spacing) * 16);
+}
+.tw\:size-56 {
+  width: calc(var(--tw-spacing) * 56);
+  height: calc(var(--tw-spacing) * 56);
+}
+.tw\:size-64 {
+  width: calc(var(--tw-spacing) * 64);
+  height: calc(var(--tw-spacing) * 64);
+}
+.tw\:size-full {
+  width: 100%;
+  height: 100%;
+}
+.tw\:h-1\.5 {
+  height: calc(var(--tw-spacing) * 1.5);
+}
+.tw\:h-16 {
+  height: calc(var(--tw-spacing) * 16);
+}
+.tw\:h-full {
+  height: 100%;
+}
+.tw\:w-40 {
+  width: calc(var(--tw-spacing) * 40);
+}
+.tw\:min-w-48 {
+  min-width: calc(var(--tw-spacing) * 48);
+}
+.tw\:flex-1 {
+  flex: 1;
+}
+.tw\:shrink-0 {
+  flex-shrink: 0;
+}
+.tw\:animate-ping {
+  animation: var(--tw-animate-ping);
+}
+.tw\:flex-col {
+  flex-direction: column;
+}
+.tw\:flex-wrap {
+  flex-wrap: wrap;
+}
+.tw\:place-items-center {
+  place-items: center;
+}
+.tw\:items-center {
+  align-items: center;
+}
+.tw\:justify-between {
+  justify-content: space-between;
+}
+.tw\:gap-1\.5 {
+  gap: calc(var(--tw-spacing) * 1.5);
+}
+.tw\:gap-2 {
+  gap: calc(var(--tw-spacing) * 2);
+}
+.tw\:gap-3 {
+  gap: calc(var(--tw-spacing) * 3);
+}
+.tw\:gap-4 {
+  gap: calc(var(--tw-spacing) * 4);
+}
+.tw\:gap-5 {
+  gap: calc(var(--tw-spacing) * 5);
+}
+.tw\:overflow-hidden {
+  overflow: hidden;
+}
+.tw\:rounded-2xl {
+  border-radius: var(--tw-radius-2xl);
+}
+.tw\:rounded-3xl {
+  border-radius: var(--tw-radius-3xl);
+}
+.tw\:rounded-full {
+  border-radius: calc(infinity * 1px);
+}
+.tw\:rounded-xl {
+  border-radius: var(--tw-radius-xl);
+}
+.tw\:border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.tw\:border-l-4 {
+  border-left-style: var(--tw-border-style);
+  border-left-width: 4px;
+}
+.tw\:border-sky-100 {
+  border-color: var(--tw-color-sky-100);
+}
+.tw\:border-l-teal-600 {
+  border-left-color: var(--tw-color-teal-600);
+}
+.tw\:bg-amber-50 {
+  background-color: var(--tw-color-amber-50);
+}
+.tw\:bg-amber-100 {
+  background-color: var(--tw-color-amber-100);
+}
+.tw\:bg-amber-400 {
+  background-color: var(--tw-color-amber-400);
+}
+.tw\:bg-emerald-50 {
+  background-color: var(--tw-color-emerald-50);
+}
+.tw\:bg-emerald-100 {
+  background-color: var(--tw-color-emerald-100);
+}
+.tw\:bg-emerald-300 {
+  background-color: var(--tw-color-emerald-300);
+}
+.tw\:bg-emerald-300\/10 {
+  background-color: var(--tw-color-emerald-300);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--tw-color-emerald-300) 10%, transparent);
+  }
+}
+.tw\:bg-emerald-500 {
+  background-color: var(--tw-color-emerald-500);
+}
+.tw\:bg-slate-100 {
+  background-color: var(--tw-color-slate-100);
+}
+.tw\:bg-slate-300 {
+  background-color: var(--tw-color-slate-300);
+}
+.tw\:bg-teal-50 {
+  background-color: var(--tw-color-teal-50);
+}
+.tw\:bg-teal-600 {
+  background-color: var(--tw-color-teal-600);
+}
+.tw\:bg-white {
+  background-color: var(--tw-color-white);
+}
+.tw\:bg-white\/10 {
+  background-color: var(--tw-color-white);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--tw-color-white) 10%, transparent);
+  }
+}
+.tw\:bg-white\/20 {
+  background-color: var(--tw-color-white);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--tw-color-white) 20%, transparent);
+  }
+}
+.tw\:bg-white\/25 {
+  background-color: var(--tw-color-white);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--tw-color-white) 25%, transparent);
+  }
+}
+.tw\:bg-linear-to-r {
+  --tw-gradient-position: to right;
+  @supports (background-image: linear-gradient(in lab, red, red)) {
+    --tw-gradient-position: to right in oklab;
+  }
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.tw\:from-teal-800 {
+  --tw-gradient-from: var(--tw-color-teal-800);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.tw\:via-teal-700 {
+  --tw-gradient-via: var(--tw-color-teal-700);
+  --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-via-stops);
+}
+.tw\:to-emerald-500 {
+  --tw-gradient-to: var(--tw-color-emerald-500);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.tw\:object-contain {
+  object-fit: contain;
+}
+.tw\:p-3 {
+  padding: calc(var(--tw-spacing) * 3);
+}
+.tw\:px-2 {
+  padding-inline: calc(var(--tw-spacing) * 2);
+}
+.tw\:px-2\.5 {
+  padding-inline: calc(var(--tw-spacing) * 2.5);
+}
+.tw\:px-3 {
+  padding-inline: calc(var(--tw-spacing) * 3);
+}
+.tw\:px-4 {
+  padding-inline: calc(var(--tw-spacing) * 4);
+}
+.tw\:px-5 {
+  padding-inline: calc(var(--tw-spacing) * 5);
+}
+.tw\:px-8 {
+  padding-inline: calc(var(--tw-spacing) * 8);
+}
+.tw\:py-0\.5 {
+  padding-block: calc(var(--tw-spacing) * 0.5);
+}
+.tw\:py-1\.5 {
+  padding-block: calc(var(--tw-spacing) * 1.5);
+}
+.tw\:py-2 {
+  padding-block: calc(var(--tw-spacing) * 2);
+}
+.tw\:py-3 {
+  padding-block: calc(var(--tw-spacing) * 3);
+}
+.tw\:py-6 {
+  padding-block: calc(var(--tw-spacing) * 6);
+}
+.tw\:text-center {
+  text-align: center;
+}
+.tw\:text-3xl {
+  font-size: var(--tw-text-3xl);
+  line-height: var(--tw-leading, var(--tw-text-3xl--line-height));
+}
+.tw\:text-base {
+  font-size: var(--tw-text-base);
+  line-height: var(--tw-leading, var(--tw-text-base--line-height));
+}
+.tw\:text-lg {
+  font-size: var(--tw-text-lg);
+  line-height: var(--tw-leading, var(--tw-text-lg--line-height));
+}
+.tw\:text-sm {
+  font-size: var(--tw-text-sm);
+  line-height: var(--tw-leading, var(--tw-text-sm--line-height));
+}
+.tw\:text-xl {
+  font-size: var(--tw-text-xl);
+  line-height: var(--tw-leading, var(--tw-text-xl--line-height));
+}
+.tw\:text-xs {
+  font-size: var(--tw-text-xs);
+  line-height: var(--tw-leading, var(--tw-text-xs--line-height));
+}
+.tw\:text-\[0\.62rem\] {
+  font-size: 0.62rem;
+}
+.tw\:text-\[0\.65rem\] {
+  font-size: 0.65rem;
+}
+.tw\:text-\[0\.68rem\] {
+  font-size: 0.68rem;
+}
+.tw\:leading-tight {
+  --tw-leading: var(--tw-leading-tight);
+  line-height: var(--tw-leading-tight);
+}
+.tw\:font-bold {
+  --tw-font-weight: var(--tw-font-weight-bold);
+  font-weight: var(--tw-font-weight-bold);
+}
+.tw\:font-extrabold {
+  --tw-font-weight: var(--tw-font-weight-extrabold);
+  font-weight: var(--tw-font-weight-extrabold);
+}
+.tw\:font-medium {
+  --tw-font-weight: var(--tw-font-weight-medium);
+  font-weight: var(--tw-font-weight-medium);
+}
+.tw\:font-semibold {
+  --tw-font-weight: var(--tw-font-weight-semibold);
+  font-weight: var(--tw-font-weight-semibold);
+}
+.tw\:tracking-\[0\.25em\] {
+  --tw-tracking: 0.25em;
+  letter-spacing: 0.25em;
+}
+.tw\:tracking-tight {
+  --tw-tracking: var(--tw-tracking-tight);
+  letter-spacing: var(--tw-tracking-tight);
+}
+.tw\:tracking-wide {
+  --tw-tracking: var(--tw-tracking-wide);
+  letter-spacing: var(--tw-tracking-wide);
+}
+.tw\:tracking-wider {
+  --tw-tracking: var(--tw-tracking-wider);
+  letter-spacing: var(--tw-tracking-wider);
+}
+.tw\:tracking-widest {
+  --tw-tracking: var(--tw-tracking-widest);
+  letter-spacing: var(--tw-tracking-widest);
+}
+.tw\:text-amber-700 {
+  color: var(--tw-color-amber-700);
+}
+.tw\:text-emerald-100 {
+  color: var(--tw-color-emerald-100);
+}
+.tw\:text-emerald-700 {
+  color: var(--tw-color-emerald-700);
+}
+.tw\:text-slate-400 {
+  color: var(--tw-color-slate-400);
+}
+.tw\:text-slate-500 {
+  color: var(--tw-color-slate-500);
+}
+.tw\:text-slate-800 {
+  color: var(--tw-color-slate-800);
+}
+.tw\:text-teal-700 {
+  color: var(--tw-color-teal-700);
+}
+.tw\:text-white {
+  color: var(--tw-color-white);
+}
+.tw\:text-white\/80 {
+  color: var(--tw-color-white);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--tw-color-white) 80%, transparent);
+  }
+}
+.tw\:text-white\/90 {
+  color: var(--tw-color-white);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--tw-color-white) 90%, transparent);
+  }
+}
+.tw\:uppercase {
+  text-transform: uppercase;
+}
+.tw\:opacity-75 {
+  opacity: 75%;
+}
+.tw\:shadow-inner {
+  --tw-shadow: inset 0 2px 4px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.tw\:shadow-lg {
+  --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.tw\:shadow-sm {
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.tw\:shadow-xl {
+  --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.tw\:ring-4 {
+  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.tw\:ring-white\/30 {
+  --tw-ring-color: var(--tw-color-white);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-ring-color: color-mix(in oklab, var(--tw-color-white) 30%, transparent);
+  }
+}
+.tw\:backdrop-blur {
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.tw\:transition {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--tw-default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--tw-default-transition-duration));
+}
+.tw\:transition-all {
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--tw-default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--tw-default-transition-duration));
+}
+.tw\:duration-300 {
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+}
+.tw\:duration-500 {
+  --tw-duration: 500ms;
+  transition-duration: 500ms;
+}
+.tw\:duration-700 {
+  --tw-duration: 700ms;
+  transition-duration: 700ms;
+}
+@media (hover: hover) {
+  .tw\:group-hover\:-translate-y-4:is(:where(.tw\:group):hover *) {
+    --tw-translate-y: calc(var(--tw-spacing) * -4);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .tw\:group-hover\:scale-110:is(:where(.tw\:group):hover *) {
+    --tw-scale-x: 110%;
+    --tw-scale-y: 110%;
+    --tw-scale-z: 110%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .tw\:group-hover\:scale-125:is(:where(.tw\:group):hover *) {
+    --tw-scale-x: 125%;
+    --tw-scale-y: 125%;
+    --tw-scale-z: 125%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .tw\:group-hover\:bg-teal-100:is(:where(.tw\:group):hover *) {
+    background-color: var(--tw-color-teal-100);
+  }
+  .tw\:hover\:-translate-y-0\.5:hover {
+    --tw-translate-y: calc(var(--tw-spacing) * -0.5);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .tw\:hover\:scale-105:hover {
+    --tw-scale-x: 105%;
+    --tw-scale-y: 105%;
+    --tw-scale-z: 105%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .tw\:hover\:-rotate-2:hover {
+    rotate: calc(2deg * -1);
+  }
+  .tw\:hover\:border-teal-200:hover {
+    border-color: var(--tw-color-teal-200);
+  }
+  .tw\:hover\:bg-white\/30:hover {
+    background-color: var(--tw-color-white);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .tw\:hover\:bg-white\/30:hover {
+      background-color: color-mix(in oklab, var(--tw-color-white) 30%, transparent);
+    }
+  }
+  .tw\:hover\:shadow-2xl:hover {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .tw\:hover\:shadow-md:hover {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+}
+@media (width >= 48rem) {
+  .tw\:md\:flex-row {
+    flex-direction: row;
+  }
+  .tw\:md\:items-end {
+    align-items: flex-end;
+  }
+  .tw\:md\:text-left {
+    text-align: left;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
+    }
+  }
+}
